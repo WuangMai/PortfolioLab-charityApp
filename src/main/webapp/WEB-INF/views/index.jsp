@@ -2,6 +2,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="common/header.jsp"/>
 
+
+    <div class="slogan container container--90">
+        <div class="slogan--item">
+            <h1>
+                Zacznij pomagać!<br/>
+                Oddaj niechciane rzeczy w zaufane ręce
+            </h1>
+        </div>
+    </div>
+</header>
+
 <section class="stats">
     <div class="container container--85">
         <div class="stats--item">
@@ -72,18 +83,18 @@
 
         <ul class="help--slides-items">
             <li>
-            <c:forEach items="${institutionList}" var="institution" varStatus="i">
+                <c:forEach items="${institutionList}" var="institution" varStatus="i">
                 <div class="col">
                     <div class="title">Fundacja “${institution.name}“</div>
                     <div class="subtitle">Cel i misja: ${institution.description}.</div>
                 </div>
 
                 <c:if test="${i.count % 2 == 0}">
-                    </li>
-                    <li>
+            </li>
+            <li>
                 </c:if>
 
-            </c:forEach>
+                </c:forEach>
 
         </ul>
     </div>

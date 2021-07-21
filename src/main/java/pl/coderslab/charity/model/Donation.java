@@ -7,6 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity(name = "donations")
 @Getter
@@ -20,8 +21,8 @@ public class Donation {
 
     private Integer quantity;
 
-    @ManyToOne
-    private Category categories;
+    @ManyToMany
+    private List<Category>  categories;
 
     @ManyToOne
     private Institution institution;
