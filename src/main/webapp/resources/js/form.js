@@ -1,6 +1,17 @@
+document.querySelectorAll("input[name='_categories']").forEach(el => el.remove()); //usuwanie elementu żeby działały cssy
+
 function showSummary() {
-    let category = "worki dlaczego to nie działa"; /** pobieranie kategorii */
+    /** pobieranie kategorii */
+    let category =[];
+    document.querySelectorAll("input[type=checkbox]").forEach(el =>{
+        if(el.checked === true){
+            category.push(el.parentElement.querySelector(".description").innerHTML);
+        }
+    })
+
+
     let quantity = document.getElementById("quantity").value; /** pobieranie ilości worków */
+
 
     /** pobieranie wybranej instytucji */
     let institution;
@@ -29,17 +40,18 @@ function showSummary() {
 
     // let quantityAndCategory = document.querySelector("li .icon-bag");
     // quantityAndCategory.nextElementSibling.innerHTML =
+
     /** PODSUMOWANIE:
      * wstawianie ilości worków i ich zawartością
      */
-    document.querySelector("li .icon-bag").nextElementSibling.innerHTML = quantity + " " + category;
+    document.querySelector("li .icon-bag").nextElementSibling.innerHTML = quantity + " worki z " + category;
 
     document.querySelector("li .icon-hand").nextElementSibling.innerHTML = "Dla fundacji " + institution;
 
-    let address=document.querySelectorAll("h4");
+    let address = document.querySelectorAll("h4");
     address.forEach(el => {
         console.log(el);
-        if(el == "<h4>Adres odbioru:</h4>"){
+        if (el == "<h4>Adres odbioru:</h4>") {
             let newLi = document.createElement("li").innerHTML = street;
             el.querySelector("ul").appendChild(newLi);
 
