@@ -88,7 +88,7 @@
 
 
         <!-- STEP 1: class .active is switching steps -->
-        <form:form method="post" action="/form-confirmation" modelAttribute="donation" id="form">
+        <form:form method="post" modelAttribute="donation" id="form">
             <div data-step="1" class="active">
                 <h3>Zaznacz co chcesz oddać:</h3>
                 <c:forEach items="${categoryList}" var="category">
@@ -274,12 +274,8 @@
     <div class="bottom-line">
         <span class="bottom-line--copy">Copyright &copy; 2018</span>
         <div class="bottom-line--icons">
-            <a href="#" class="btn btn--small"
-            ><img src="images/icon-facebook.svg"
-            /></a>
-            <a href="#" class="btn btn--small"
-            ><img src="images/icon-instagram.svg"
-            /></a>
+            <a href="#" class="btn btn--small"><img src="<c:url value="resources/images/icon-facebook.svg"/>"/></a>
+            <a href="#" class="btn btn--small"><img src="<c:url value="resources/images/icon-instagram.svg"/>"/></a>
         </div>
     </div>
 </footer>
