@@ -1,4 +1,4 @@
-<img alt="Logo" src="http://coderslab.pl/svg/logo-coderslab.svg" width="400">
+<img alt="Logo" src="https://lms.coderslab.pl/img/cl-logo.svg" width="400">
 
 
 Przed przystąpieniem do pracy  przeczytaj poniższe wskazówki.
