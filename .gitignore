@@ -27,3 +27,6 @@ HELP.md
 
 ### VS Code ###
 .vscode/
+
+### Secure data ###
+/src/main/resources/application-dev.properties
