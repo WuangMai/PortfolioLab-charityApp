@@ -8,7 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity(name = "users")
-@Getter @Setter @RequiredArgsConstructor
+@Getter @Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,4 +24,10 @@ public class User {
 
     private String role;
 
+    private boolean enabled;
+
+    public User(){
+        super();
+        this.enabled=false;
+    }
 }
