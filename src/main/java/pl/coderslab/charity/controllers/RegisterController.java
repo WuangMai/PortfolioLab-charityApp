@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.charity.model.User;
+import pl.coderslab.charity.model.ValidPassword;
 import pl.coderslab.charity.services.IUserService;
 import pl.coderslab.charity.services.SimpleRegistrationToken;
 
@@ -37,8 +38,9 @@ public class RegisterController {
     @PostMapping
     public String postRegPage(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) return "/register";
-        if(!user.getPassword().equals(user.getPasswordConfirm())){
-
+        @ValidPassword
+        String userPass = user.getPassword();
+        if(!userPass.equals(user.getPasswordConfirm())){
             return "/register";
         }
         String encodedPassword = passwordEncoder.encode(user.getPassword());

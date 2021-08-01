@@ -20,7 +20,6 @@ public class User {
 
     @NotBlank
     @Column(nullable = false)
-    @ValidPassword
     private String password;
 
     @Transient
