@@ -12,9 +12,9 @@ Założenia do zaliczenia projektu:
 - tworzę skrypt w JS wyświetlający potwierdzenie wprowadzonych danych w formularzu
 - zapisuję obiekt do bazy
 
-Wymagania zostały spełnione używając Spring Boot, Spring Form, Hibernate, Spring Data JPA
-Dodatkowo wdrożyłem Spring Security obsługujące rejestrację z wysyłką maila z linkiem aktywacyjnym konto.
-Możliwość przesłania formularza ograniczyłem tylko do zalogowanych użytkowników.
-Dodałem wysyłanie maila w tle, aby użytkownik nie czekał aż mail faktycznie się wyśle użwając @Async
-Dodałem wysyłanie maila z potwierdzeniem przesłania formularza(również w tle)
-Wprowadziłem walidację haseł tworząc adnotację @ValidPassword
+	Wymagania zostały spełnione używając Spring Boot, Spring Form, Hibernate, Spring Data JPA
+	Dodatkowo wdrożyłem Spring Security obsługujące rejestrację z wysyłką maila z linkiem aktywacyjnym konto.
+	Możliwość przesłania formularza ograniczyłem tylko do zalogowanych użytkowników.
+	Dodałem wysyłanie maila w tle, aby użytkownik nie czekał aż mail faktycznie się wyśle użwając @Async
+	Dodałem wysyłanie maila z potwierdzeniem przesłania formularza(również w tle)
+	Wprowadziłem walidację haseł tworząc adnotację @ValidPassword
