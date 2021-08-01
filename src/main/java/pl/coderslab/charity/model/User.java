@@ -1,11 +1,11 @@
 package pl.coderslab.charity.model;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+
 
 @Entity(name = "users")
 @Getter @Setter
@@ -20,7 +20,11 @@ public class User {
 
     @NotBlank
     @Column(nullable = false)
+    @ValidPassword
     private String password;
+
+    @Transient
+    private String passwordConfirm;
 
     private String role;
 
