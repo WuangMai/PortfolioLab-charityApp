@@ -6,6 +6,7 @@ import pl.coderslab.charity.model.Category;
 import pl.coderslab.charity.model.Donation;
 
 import java.security.Principal;
+import java.util.Arrays;
 
 @Component
 public class SimpleConfirmationEmail {
@@ -25,7 +26,7 @@ public class SimpleConfirmationEmail {
                         .append("Przesyłamy potwierdzenie odbioru worków\n\n")
                         .append("Przekazujesz:\n")
                         .append("Ilość worków: ").append(donation.getQuantity()).append(" zawierających ")
-                        .append(donation.getCategories()) //TODO Poprawić wyświetlanie nazw kategorii
+                        .append(Arrays.toString(donation.getCategories().stream().map(Category::getName).toArray()))
                         .append("\ndla fundacji \"")
                         .append(donation.getInstitution().getName()).append("\" \n\n")
                         .append("Adres odbioru: ").append(donation.getStreet()).append("\n")
